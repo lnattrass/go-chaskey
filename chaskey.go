@@ -23,6 +23,9 @@ func New(k [4]uint32) *H { return newH(k, 8) }
 // New12 returns a new 12-round chaskey hasher.
 func New12(k [4]uint32) *H { return newH(k, 12) }
 
+// NewLTS returns a new 16-round Chaskey-LTS hasher
+func NewLTS(k [4]uint32) *H { return newH(k, 16) }
+
 func newH(k [4]uint32, rounds int) *H {
 
 	h := H{
